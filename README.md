@@ -18,7 +18,6 @@ The answer is simple: after search and test the majority of the available plugin
 ##A note about this repo
 
 This is a beta plugin, so it's not ready yet for publishing. But if you want to contribute, you are welcome!
-<<<<<<< HEAD
 
 ##Changelog
 
@@ -29,5 +28,3 @@ This is a beta plugin, so it's not ready yet for publishing. But if you want to 
 * [ ] Expand functionality for the shortcode
 * [ ] Build a shortcode generator using Backbone to build the UI
 * [ ] Improve plugin options (like the Results page)
-=======
->>>>>>> e2a378f43e19bf9cf685937656dd991e5d4d41f2
