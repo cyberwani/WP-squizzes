@@ -1,0 +1,26 @@
+<div id="wpsq-results-numbers">
+	<h2><span class="wpsq-bars"></span> <%= labels.results %></h2>
+
+	<div class="wpsq-results-percentage"><strong><% print( Math.floor( (questions_answered / questions_total) * 100, 2) ) %>%</strong> <small>das questões respondidas</small></div>
+	<div class="wpsq-results-percentage"><strong><% print( Math.floor( (questions_correct / questions_total) * 100, 2) ) %>%</strong> <small>margem de acerto</small></div>
+
+	<ul>
+		<li class="wpsq-results-total"><strong><%= labels.questionsTotal %>:</strong> <%= questions_total %></li>
+		<li class="wpsq-results-answered"><strong><%= labels.questionsAnswered %>:</strong> <%= questions_answered %></li>
+		<li class="wpsq-results-correct"><strong><%= labels.questionsCorrect %>:</strong> <%= questions_correct %></li>
+		<li class="wpsq-results-wrong"><strong><%= labels.questionsWrong %>:</strong> <% print( questions_answered - questions_correct ); %></li>
+	</ul>
+
+</div>
+
+<div id="wpsq-results-answers">
+	<h3 id="wpsq-results-answers-toggle"><%= labels.questionsEach %></h3>
+	<ol id="wpsq-results-answers-list">
+		<% _.each ( questionsResults, function(ans, key) { %>
+			<li class="wpsq-answer-<%= ans.correct_answer %>">
+				<span class="wpsq-which-selected"><strong><%= labels.questionSelected %>:</strong> <%= ans.selected %></span>
+				<span class="wpsq-which-right"><strong><%= labels.questionCorrect %>:</strong> <%= ans.correct %></span>
+			</li>	
+		<% } ) %>
+	</ol>
+</div>

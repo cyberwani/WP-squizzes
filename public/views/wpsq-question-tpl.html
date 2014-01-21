@@ -1,0 +1,17 @@
+<small><%= label + ' ' + index  %> |
+	<% _.each ( courses, function(cour) { %>
+		<span class="wpsq-question-course"><%= cour %></span>	
+	<% } ) %>
+</small>
+
+<h3 class="wpsq-title"><%= title %></h3>
+
+<div class="wpsq-question">
+	<%= question %>
+</div>
+
+<ol class="wpsq-answers">
+	<% _.each ( answers, function(ans, key) { %>
+		<li class="wpsq-answer<% if( key == selected ){ %> selected<% } %>" data-answer-num="<%= key %>"><p><%= ans.answer %></p></li>	
+	<% } ) %>
+</ol>

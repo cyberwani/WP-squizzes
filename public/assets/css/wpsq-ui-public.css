@@ -1,0 +1,428 @@
+/*custom icon fonts for the ui*/
+@font-face {
+	font-family: 'wpsquizzes';
+	src:url('../fonts/wpsquizzes.eot');
+	src:url('../fonts/wpsquizzes.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/wpsquizzes.woff') format('woff'),
+		url('../fonts/wpsquizzes.ttf') format('truetype'),
+		url('../fonts/wpsquizzes.svg#wpsquizzes') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="wpsq-icon-"], [class*="wpsq-icon-"] {
+	font-family: 'wpsquizzes';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.wpsq-icon-check-alt:before {
+	content: "\21";
+}
+.wpsq-icon-x-altx-alt:before {
+	content: "\22";
+}
+.wpsq-icon-plus:before {
+	content: "\23";
+}
+.wpsq-icon-minus:before {
+	content: "\24";
+}
+.wpsq-icon-bars:before {
+	content: "\27";
+}
+.wpsq-icon-list:before {
+	content: "\2a";
+}
+.wpsq-icon-trash:before {
+	content: "\25";
+}
+.wpsq-icon-question-sign:before {
+	content: "\26";
+}
+.wpsq-icon-repeat:before {
+	content: "\28";
+}
+.wpsq-icon-caret-down:before {
+	content: "\29";
+}
+.wpsq-icon-caret-up:before {
+	content: "\2b";
+}
+.wpsq-icon-caret-left:before {
+	content: "\2c";
+}
+.wpsq-icon-caret-right:before {
+	content: "\2d";
+}
+
+/* buttons styling  ========================================================= */
+.wpsq-button{
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 10px;
+	border: none;
+	font-family: sans-serif;
+	color: #8e959e;
+	background-color: #E1E3E6;
+	outline: none;
+	-webkit-border-radius: 5px;
+			border-radius: 5px;
+	-webkit-box-shadow: inset 0 -2px 0 rgba(0,0,0,0.1);
+			box-shadow: inset 0 -2px 0 rgba(0,0,0,0.1);
+	/* Disable default appearance of input elements in WebKit and iOS */
+	-webkit-appearance: none;
+}
+.wpsq-button:hover{ background-color: #c9d0d8; }
+
+#wpsq-start-quiz, #wpsq-quiz-finish, #wpsq-new-quiz{ background-color: #168734; color: #fff; }
+#wpsq-start-quiz:hover, #wpsq-quiz-finish:hover, #wpsq-new-quiz:hover{ background-color: #13752c; }
+
+#wpsq-start-quiz:after, #wpsq-quiz-next:after, #wpsq-quiz-prev:before{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 32px;
+	text-align: center;
+	font-family: 'wpsquizzes';
+	font-style: normal;
+	line-height: 32px;
+	background-color: rgba(0,0,0,0.2);
+}
+#wpsq-start-quiz, #wpsq-quiz-next{ padding-right: 42px; } 
+#wpsq-start-quiz:after, #wpsq-quiz-next:after{ 
+	right: 0;
+	content: '\2d';
+	-webkit-border-radius: 0 5px 5px 0;
+			border-radius: 0 5px 5px 0;
+}
+#wpsq-quiz-prev{ padding-left: 42px; } 
+#wpsq-quiz-prev:before{
+	left: 0; 
+	content: '\2c'; 
+	-webkit-border-radius: 5px 0 0 5px;
+			border-radius: 5px 0 0 5px;
+}
+
+
+/* the list with types of questions ========================================= */
+#wpsq-types-list{
+	display: table;
+	width: 100%;
+	position: relative;
+	margin: 0 0 20px 0;
+	padding: 10px 10px 0 0;
+	list-style: none;
+	background-color: #f2f4f4;
+}
+#wpsq-types-list li{
+	display: table-cell;
+	width: 25%;
+	padding: 0 0 10px 10px;
+}
+
+#wpsq-types-list label{
+	position: relative;
+	display: block;
+	padding: 10px 40px 10px 10px;
+	cursor: pointer;
+}
+#wpsq-types-list label:after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-family: 'wpsquizzes';
+	font-size: 21px;
+	color: #168734;
+}
+
+#wpsq-types-list input[type="checkbox"]{
+	display: none;
+}
+#wpsq-types-list input[type="checkbox"]:checked + label{ background-color: #fff; }
+#wpsq-types-list input[type="checkbox"]:checked + label:after{ content: "\21"; }
+
+#wpsq-types-list li span{
+	display: inline-block;
+	padding: 3px 5px;
+	margin-left: 3px;
+	color: #fff;
+	font-size: .8em;
+	font-weight: bold;
+	line-height: 1;
+	/*background-color: #ef6c40;*/
+	background-color: #F6AB91;
+	-webkit-border-radius: 15px;
+		    border-radius: 15px;
+}
+
+#wpsq-questions-number-container{ float: left; }
+#wpsq-start-quiz{ float: right; }
+
+#wpsq-questions-number-container button{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	border: none;
+	color: #8e959e;
+	background-color: #E1E3E6;
+	outline: none;
+}
+#wpsq-questions-number-container button:hover{ background-color: #c9d0d8; }
+.wpsq-number-minus{
+	-webkit-border-radius: 5px 0 0 5px;
+		    border-radius: 5px 0 0 5px;	
+}
+.wpsq-number-plus{
+	-webkit-border-radius: 0 5px 5px 0;
+		    border-radius: 0 5px 5px 0;	
+}
+#wpsq-questions-number{
+	display: inline-block;
+	width: 50px;
+	height: 30px;
+	text-align: center;
+	border: 1px solid #E1E3E6;
+	background-color: #fff;
+}
+
+#wpsq-loading{
+	display: none;
+	width: 100%;
+	padding: 50px;
+	text-align: center;
+}
+
+/* controls buttons of the quiz ============================================= */
+#wpsq-quiz-controls{
+	display: none;
+	position: relative;
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid #f2f4f4;
+}
+#wpsq-quiz-prev{ float: left; }
+#wpsq-quiz-next, #wpsq-quiz-finish{ float: right; }
+#wpsq-quiz-prev, #wpsq-quiz-finish{ display: none; }
+
+/* questions styling ========================================================= */
+.wpsq-question-body small { 
+	text-transform: uppercase; 
+	letter-spacing: 1px; 
+	font-size: .75em;
+}
+
+.wpsq-question-body .wpsq-title{
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid #E1E3E6;
+}
+.wpsq-question-body .wpsq-question{ padding-bottom: 10px; }
+
+/* answers styling  ========================================================== */
+.wpsq-answers{
+	margin: 0;
+	padding: 0;
+	counter-reset: list;
+	background-color: #f2f4f4;
+}
+.wpsq-answer{
+	display: table;
+	width: 100%;
+	position: relative;
+	padding: 10px 40px 10px 10px;
+	cursor: pointer;
+	border-top: 1px solid #E1E3E6;
+	list-style: none;
+}
+.wpsq-answer:before{
+	display: table-cell;
+	content: counter(list, lower-alpha) ") ";
+	counter-increment: list;
+	font-weight: 700;
+	font-size: 1em;
+	padding-right: 15px;
+}
+.wpsq-answer:after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	margin-top: -11px;
+	right: 10px;
+	font-family: 'wpsquizzes';
+	font-size: 22px;
+	color: #168734;
+}
+
+.wpsq-answer:first-child{ border-top: none; }
+.wpsq-answer.selected{ background-color: #fffad6; }
+.wpsq-answer.selected:after{ content: "\21"; }
+
+.wpsq-answer p{ 
+	margin: 0;
+	display: table-cell;
+	width: 99%;
+}
+
+/* results styling ======================================================== */
+#wpsq-results-numbers h2, #wpsq-results-answers h3{
+	padding: 20px;
+	margin: 0;
+	border: 3px solid #fff;
+}
+
+#wpsq-results-numbers h2{ background-color: #E1E3E6; text-align: center; }
+
+.wpsq-results-percentage{
+	width: 50%;
+	float: left;
+	padding: 20px;
+	font-size: 3em;
+	line-height: 1;
+	text-align: center;
+	background-color: #f2f4f4;
+	border: 3px solid #fff;
+}
+.wpsq-results-percentage small{
+	display: block;
+	font-size: 0.3em;
+	line-height: 1.2;
+}
+
+#wpsq-results-numbers ul, #wpsq-results-answers ol{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#wpsq-results-numbers ul:after{
+	content: '';
+	display: table;
+}
+
+#wpsq-results-numbers li{
+	width: 25%;
+	float: left;
+	padding: 10px;
+	background-color: #f2f4f4;
+	border: 3px solid #fff;
+}
+
+#wpsq-results-answers-toggle{
+	position: relative;
+	text-align: left;
+	cursor: pointer;
+	line-height: 32px;
+	background-color: #f2f4f4;
+}
+#wpsq-results-answers-toggle:hover:after{ background-color: #E1E3E6; }
+#wpsq-results-answers-toggle:after{
+	content: "\29";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	padding: 20px;
+	width: 32px;
+	text-align: center;
+	font-family: 'wpsquizzes';
+	font-style: normal;
+	font-size: 24px;
+}
+#wpsq-results-answers-toggle.active:after{ content: "\2b"; }
+
+#wpsq-results-answers ol{ counter-reset: list; }
+#wpsq-results-answers li{
+	position: relative;
+	padding: 10px;
+	border: 3px solid #fff;
+}
+#wpsq-results-answers li:before{
+	content: counter(list) ") ";
+	counter-increment: list;
+}
+
+.wpsq-which-selected{ margin-right: 10px; }
+
+.wpsq-answer-yes:after, .wpsq-answer-no:after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-family: 'wpsquizzes';
+	font-size: 21px;
+}
+.wpsq-answer-yes{ background-color: #DFF6E5; }
+.wpsq-answer-yes:after{ 
+	content: "\21";
+	color: #168734;
+}
+.wpsq-answer-no{ background-color: #FAECE7; }
+.wpsq-answer-no:after{ 
+	content: "\22";
+	color: #F6AB91;
+}
+.wpsq-answer-none{ background-color: #f2f4f4; }
+
+/* CSS spinner from SpinKIT (http://tobiasahlin.com/spinkit/) ===================== */
+.spinner {
+  margin: 70px auto 0;
+  width: 100px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 24px;
+  height: 24px;
+  background-color: #E1E3E6;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
