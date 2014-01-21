@@ -64,6 +64,11 @@
 	content: "\2d";
 }
 
+#wpsq-quizzes * {
+		-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+}
+
 /* buttons styling  ========================================================= */
 .wpsq-button{
 	position: relative;
