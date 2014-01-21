@@ -21,10 +21,10 @@ This is a beta plugin, so it's not ready yet for publishing. But if you want to 
 
 ##Changelog
 
--**1.0.0**: Initial state of the plugin, with basic functionality and a system to generate random quizzes based on question types.
+* **1.0.0**: Initial state of the plugin, with basic functionality and a system to generate random quizzes based on question types.
 
 ##TODO
 
-* [ ] Expand functionality for the shortcode
-* [ ] Build a shortcode generator using Backbone to build the UI
-* [ ] Improve plugin options (like the Results page)
+* Expand functionality for the shortcode
+* Build a shortcode generator using Backbone to build the UI
+* Improve plugin options (like the Results page)
